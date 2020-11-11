@@ -1,3 +1,3 @@
 ---
-title: TailwindCSS Basic Hugo Starter
+title: projects - tour - all the feels
 ---

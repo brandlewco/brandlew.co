@@ -1,3 +1,2 @@
 ---
-title: TailwindCSS Basic Hugo Starter
----
+title: projects - tour - the mirror tour
