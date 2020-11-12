@@ -12,11 +12,9 @@ fields:
   label: Hero Image
   description: Hero image, if applicable
 - name: gallery
-  type: list
+  type: blocks
+  label: Gallery
+  template_types: []
   config:
-    use_select: false
     min: 
     max: 
-    source:
-      type: simple
-  label: Gallery
