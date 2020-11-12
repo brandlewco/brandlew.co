@@ -18,7 +18,6 @@ fields:
   type: boolean
   label: Custom Embed
   showOnly:
-    field: custom_embed_toggle
     value: true
 - name: custom_embed
   type: textarea
@@ -29,6 +28,9 @@ fields:
     schema:
       format: markdown
   label: Custom Embed
+  showOnly:
+    field: custom_embed_toggle
+    value: true
 - name: gallery
   type: blocks
   label: Gallery
