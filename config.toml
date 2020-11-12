@@ -1,4 +1,4 @@
-baseURL = "https://gracious-cori-dc9aa2.netlify.app"
+baseURL = "https://brandlewco.netlify.app"
 
 disableKinds = ["page", "section", "taxonomy", "term"]
 
