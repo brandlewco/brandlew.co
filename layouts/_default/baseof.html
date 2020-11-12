@@ -15,9 +15,9 @@
     {{ end }}
     <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
 
-    {{ $js := resources.Get "js/main.js" }}
+    {{ $js := resources.Get "js/main.js"}}
     {{ if  hugo.IsProduction  }}
-      {{ $js = $js | minify | fingerprint | js.Build "main.js"  }}
+      {{ $js = $js | minify | fingerprint }}
     {{ end }}
     <script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>
 
