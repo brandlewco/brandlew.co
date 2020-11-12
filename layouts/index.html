@@ -3,7 +3,11 @@
     <h1 class="text-4xl">
       {{ .Title }}
     </h1>
-
+    <ul>
+    {{ range .Site.Pages }}
+      <li><a href="{{ .Permalink }}">{{.Title}}</a></li>
+    {{ end }}
+    </ul>
     {{ .Content }}
   </article>
 {{ end }}
