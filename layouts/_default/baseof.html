@@ -14,6 +14,14 @@
       {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
     {{ end }}
     <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
+
+    {{ $js := resources.Get "js/main.js" }}
+    {{ if  hugo.IsProduction  }}
+      {{ $js = $js | minify | fingerprint | js.Build "main.js"  }}
+    {{ end }}
+    <script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>
+
+
   </head>
   <body class="my-10">
     <div class="container px-4 lg:mx-auto">

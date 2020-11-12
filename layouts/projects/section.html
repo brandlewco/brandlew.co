@@ -4,10 +4,8 @@
     {{ .Content }}
         <ul class="contents">
         {{ range .Paginator.Pages }}
-            <li>{{.Title}}
-            </li>
+            <li><a href="{{.Permalink}}">{{.Title}}</a></li>
         {{ end }}
         </ul>
-    <!-- {{ partial "pagination.html" . }} -->
 </main>
 {{ end }}
