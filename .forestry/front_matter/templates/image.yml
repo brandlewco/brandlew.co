@@ -1,4 +1,46 @@
 ---
 label: Image
 hide_body: true
-fields: []
+fields:
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: Image
+- name: alignment
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - justify-start
+    - justify-center
+    - justified-end
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Alignment
+- name: width
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - '10'
+    - '20'
+    - '30'
+    - '40'
+    - '50'
+    - '60'
+    - '70'
+    - '80'
+    - '90'
+    - '100'
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Width
