@@ -1,5 +1,9 @@
 {{ define "main" }}
+  {{ if eq .Params.scrollSnap "true"}}
+  <article class="prose lg:prose-xl scrollsnap">
+  {{else}}
   <article class="prose lg:prose-xl">
+  {{end}}
     <h1 class="text-4xl">
       {{ .Title }}
     </h1>
