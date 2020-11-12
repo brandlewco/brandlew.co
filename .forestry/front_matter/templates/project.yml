@@ -18,3 +18,5 @@ fields:
   config:
     min: 
     max: 
+pages:
+- content/projects/tour/the-mirror-tour.md
