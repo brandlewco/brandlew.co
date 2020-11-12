@@ -1,10 +1,10 @@
 ---
-label: project
+label: Project
 hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
 - name: hero_image
   type: file
   config:
@@ -14,7 +14,8 @@ fields:
 - name: gallery
   type: blocks
   label: Gallery
-  template_types: []
+  template_types:
+  - image
   config:
     min: 
     max: 
