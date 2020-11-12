@@ -11,6 +11,24 @@ fields:
     maxSize: 64
   label: Hero Image
   description: Hero image, if applicable
+  showOnly:
+    field: custom_embed_toggle
+    value: false
+- name: custom_embed_toggle
+  type: boolean
+  label: Custom Embed
+  showOnly:
+    field: custom_embed_toggle
+    value: true
+- name: custom_embed
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Custom Embed
 - name: gallery
   type: blocks
   label: Gallery
