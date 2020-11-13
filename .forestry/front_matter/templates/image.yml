@@ -28,16 +28,12 @@ fields:
   config:
     required: false
     options:
-    - '10'
-    - '20'
-    - '30'
-    - '40'
-    - '50'
-    - '60'
-    - '70'
-    - '80'
-    - '90'
-    - '100'
+    - 1/4
+    - 1/3
+    - 1/2
+    - 2/3
+    - 3/4
+    - full
     source:
       type: simple
       section: 
