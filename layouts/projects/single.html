@@ -1,12 +1,25 @@
 {{ define "main" }}
-  {{ if eq .Params.scrollSnap true}}
-  <article class="prose lg:prose-xl scrollsnap">
-  {{else}}
-  <article class="prose lg:prose-xl">
-  {{end}}
-    <h1 class="text-4xl">
-      {{ .Title }}
-    </h1>
-    {{if .Params.}}
-  </article>
+<section class="flex flex-col child-start">
+
+  <!-- <h1 class="text-4xl">
+    {{ .Title }}
+  </h1> -->
+
+    {{if eq .Params.custom_embed_toggle true}}
+    {{ .Params.custom_embed }}
+    {{else}}
+    <figure class="h-screen flex flex-col justify-center">
+      <img class="lazyload" data-sizes="auto" data-src="{{.Params.hero_image}}?width=1200" alt="{{.Title}}">
+    </figure>
+    {{end}}
+
+    <article class="flex flex-col">
+    {{ range .Params.gallery }}
+      <figure class="h-full lg:h-scroll flex flex-row {{with .alignment}}lg:justify-{{.}} justify-center {{end}} child-center">
+        <img class="lazyload h-off w-11/12 {{with .height}}lg:h-{{.}}{{end}} lg:w-auto cover" data-sizes="auto" data-src="{{.image}}?width=1200">
+        </figure>
+    {{end}}
+    </article>
+
+</section>
 {{ end }}

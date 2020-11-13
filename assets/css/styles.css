@@ -4,12 +4,67 @@
 
 @import "components/all.css";
 
+@layer base {
+  @responsive {
+    .h-1\/4 {
+      max-height: 25%;
+    }
+    .h-1\/3 {
+      max-height: 33%;
+    }
+    .h-2\/3 {
+      max-height: 66%;
+    }
+    .h-1\/2 {
+      max-height: 50%;
+    }
+    .h-3\/4 {
+      max-height: 75%;
+    }
+    .h-scroll {
+      height: 80vh;
+    }
+    .h-off {
+      max-height: none;
+    }
+  }
+  .parent{
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    width:100vw;
+    overflow-x: hidden;
+  }
+
+  .child-center {
+    scroll-snap-align: center;
+    scroll-snap-stop: normal;
+  }
+
+
+  .child-start {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+  }
+
+  .child-end {
+    scroll-snap-align: end;
+    scroll-snap-stop: normal;
+  }
+}
+
+@layer utilities {
+  @responsive {
+
+  }
+}
+
 html {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 @screen md {
-    html {
-        font-size: 16px;
-    }
+  html {
+    font-size: 16px;
+  }
 }

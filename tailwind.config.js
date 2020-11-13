@@ -10,7 +10,7 @@ const em = (px, base) => `${round(px / base)}em`;
 const px = (px) => `${px}px`;
 
 module.exports = {
-	important: true, // See https://tailwindcss.com/docs/configuration#important
+	important: false, // See https://tailwindcss.com/docs/configuration#important
 	experimental: {
 		// See https://github.com/tailwindlabs/tailwindcss/pull/2159
 		applyComplexClasses: true
@@ -28,5 +28,5 @@ module.exports = {
 			}
 		}
 	},
-	plugins: [ typography ]
+	plugins: [ typography ],
 };

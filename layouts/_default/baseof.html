@@ -13,18 +13,14 @@
     {{ if  hugo.IsProduction  }}
       {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
     {{ end }}
-    <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 
-    {{ $js := resources.Get "js/main.js"}}
-    {{ if  hugo.IsProduction  }}
-      {{ $js = $js | minify | fingerprint }}
-    {{ end }}
-    <script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>
+    {{ partial "scripts" . }}
 
 
   </head>
-  <body class="my-10">
-    <div class="container px-4 lg:mx-auto">
+  <body>
+    <div class="parent lg:px-40 mx-auto">
       {{ block "main" . }}{{ end }}
     </div>
   </body>
