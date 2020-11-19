@@ -4,6 +4,20 @@ hero_image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-philly-28.
 gallery:
 - template: image
   image:
+  - image: ''
+    alignment: []
+    width: []
+  - image: ''
+    alignment: []
+    width: []
+  - image: ''
+    alignment: []
+    width: []
+  - image: ''
+    alignment: []
+    width: []
+- template: image
+  image:
   - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
     alignment: ''
     width: ''
