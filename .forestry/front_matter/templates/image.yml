@@ -2,7 +2,7 @@
 label: Image
 hide_body: true
 fields:
-- name: images
+- name: image
   type: field_group_list
   config: {}
   fields:
@@ -45,4 +45,4 @@ fields:
         file: 
         path: 
     label: Width
-  label: Images
+  label: Image
