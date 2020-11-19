@@ -1,5 +1,9 @@
 <!doctype html>
-<html lang="en">
+{{if eq .Params.scroll_snap true}}
+<html class="scrollsnap" lang="en">
+  {{else}}
+  <html lang="en">
+  {{end}}
   <head>
     <meta charset="utf-8">
     <title>

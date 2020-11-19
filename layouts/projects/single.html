@@ -1,5 +1,5 @@
 {{ define "main" }}
-<section class="flex flex-col child-start">
+<section class="flex flex-col snap-start">
 
   <!-- <h1 class="text-4xl">
     {{ .Title }}
@@ -15,7 +15,7 @@
 
     <article class="flex flex-col">
     {{ range .Params.gallery }}
-      <figure class="h-full lg:h-scroll flex flex-row {{with .alignment}}lg:justify-{{.}} justify-center {{end}} child-center">
+      <figure class="h-screen lg:h-scroll flex flex-row {{with .alignment}}lg:justify-{{.}} justify-center {{end}} snap-center">
         <img class="lazyload h-off w-11/12 {{with .height}}lg:h-{{.}}{{end}} lg:w-auto cover" data-sizes="auto" data-src="{{.image}}?width=1200">
         </figure>
     {{end}}

@@ -28,26 +28,44 @@
       max-height: none;
     }
   }
-  .parent{
-    overflow: scroll;
-    scroll-snap-type: y mandatory;
-    height: 100vh;
-    width:100vw;
-    overflow-x: hidden;
+  .scrollbar::-webkit-scrollbar,
+  html::-webkit-scrollbar {
+    width: 4px;
   }
 
-  .child-center {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: #c8c8c8 #fff;
+  }
+
+  .scrollbar::-webkit-scrollbar-track,
+  html::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb,
+  html::-webkit-scrollbar-thumb {
+    background-color: #c8c8c8;
+  }
+  html.scrollsnap {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  .snap-center {
     scroll-snap-align: center;
     scroll-snap-stop: normal;
   }
 
-
-  .child-start {
+  .snap-start {
     scroll-snap-align: start;
     scroll-snap-stop: normal;
   }
 
-  .child-end {
+  .snap-end {
     scroll-snap-align: end;
     scroll-snap-stop: normal;
   }
@@ -55,7 +73,6 @@
 
 @layer utilities {
   @responsive {
-
   }
 }
 
