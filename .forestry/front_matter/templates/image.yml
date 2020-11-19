@@ -2,41 +2,47 @@
 label: Image
 hide_body: true
 fields:
-- name: image
-  type: file
-  config:
-    maxSize: 64
-  label: Image
-- name: alignment
-  type: select
-  default: []
-  config:
-    required: false
-    options:
-    - start
-    - center
-    - end
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Alignment
-- name: width
-  type: select
-  default: []
-  config:
-    required: false
-    options:
-    - 1/4
-    - 1/3
-    - 1/2
-    - 2/3
-    - 3/4
-    - full
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Width
+- name: images
+  type: field_group
+  config: {}
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+  - name: alignment
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - start
+      - center
+      - end
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Alignment
+  - name: width
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - auto
+      - 1/4
+      - 1/3
+      - 1/2
+      - 2/3
+      - 3/4
+      - full
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Width
+  label: Images
