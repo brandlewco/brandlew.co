@@ -2,6 +2,23 @@
 label: Image Group
 hide_body: true
 fields:
+- name: alignment
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - justify-between
+    - justify-around
+    - justify-start
+    - justify-center
+    - justify-end
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Row Alignment (x)
 - name: image
   type: field_group_list
   config: {}
