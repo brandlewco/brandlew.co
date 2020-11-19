@@ -16,14 +16,14 @@
 
       {{ range .Params.gallery }}
       <article class="h-screen xl:snap-start">
-      <div class="flex flex-col xl:flex-row xl:flex-gap-x">
+      <div class="flex flex-col xl:flex-row xl:flex-gap-x {{with .alignment}}{{.}}{{else}}justify-between{{end}}">
       {{ if .image }}
       {{ $items := len .image }}
       {{ $counter := 0 }}
       {{ range .image }}
       {{ $counter = add $counter 1 }}
-        <figure class="{{if lt $items 3}}2-items{{else}}{{end}} h-screen flex flex-row xl:flex-col {{if .aligment }}justify-{{ .alignment}}{{else}}justify-center{{end}}">
-            <img class="snap-center xl:snap-reset lazyload w-3/4 xl:w-full {{with .height}}xl:h-{{.}}{{end}} object-scale-down xl:object-cover" data-sizes="auto" data-src="{{.image}}?width=1200">
+        <figure class="{{if lt $items 3}}2-items{{else}}{{end}} h-screen flex flex-row xl:flex-col justify-center {{if .alignment }}lg:justify-{{ .alignment}}{{else}}lg:justify-center{{end}}" style="{{with .width}}min-width: {{.}}%; max-width: {{.}}%;{{end}}">
+            <img class="lg:py-8 snap-center xl:snap-reset lazyload w-3/4 xl:w-full {{with .height}}xl:h-{{.}}{{end}} object-scale-down xl:object-cover" data-sizes="auto" data-src="{{.image}}?width=1200">
           </figure>
       {{end}}
       {{end}}
