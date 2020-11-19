@@ -16,29 +16,23 @@ gallery:
 - template: image
   image:
   - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
-    alignment: ''
     alignment: []
     width: []
   - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
-    alignment: ''
     alignment: []
     width: []
 - template: image
   image:
   - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
-    alignment: ''
     alignment: []
     width: []
   - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
-    alignment: ''
+    alignment: end
+    width: ''
+  - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
     alignment: []
     width: []
   - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
-    alignment: ''
-    alignment: []
-    width: []
-  - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
-    alignment: ''
     alignment: []
     width: []
 custom_embed_toggle: false
