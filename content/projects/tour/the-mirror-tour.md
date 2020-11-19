@@ -6,13 +6,14 @@ gallery:
   image:
   - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
     alignment: start
-    width: ''
+    width: 
   - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
     alignment: center
-    width: ''
+    width: 
   - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
     alignment: end
-    width: ''
+    width: 
+  alignment: ''
 - template: image
   image:
   - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
@@ -21,6 +22,7 @@ gallery:
   - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
     alignment: center
     width: []
+  alignment: ''
 - template: image
   image:
   - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
@@ -28,13 +30,14 @@ gallery:
     width: []
   - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
     alignment: end
-    width: ''
+    width: 
   - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
     alignment: start
     width: []
   - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
     alignment: end
     width: []
+  alignment: ''
 - template: image
   image:
   - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
@@ -46,6 +49,7 @@ gallery:
   - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
     alignment: end
     width: []
+  alignment: ''
 - template: image
   image:
   - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
@@ -54,6 +58,7 @@ gallery:
   - image: https://d2fbrjs17y4k19.cloudfront.net/brandlew.co/twin-xl-chicago-32.jpg
     alignment: start
     width: '25'
+  alignment: justify-center
 custom_embed_toggle: false
 custom_embed: ''
 scroll_snap: true
