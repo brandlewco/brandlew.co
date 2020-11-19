@@ -8,18 +8,28 @@
     {{if eq .Params.custom_embed_toggle true}}
     {{ .Params.custom_embed }}
     {{else}}
-    <figure class="h-screen flex flex-col justify-center">
-      <img class="lazyload" data-sizes="auto" data-src="{{.Params.hero_image}}?width=1200" alt="{{.Title}}">
+    <figure class="xl:h-screen flex flex-row justify-center items-center">
+      <img class="lazyload w-3/4 xl:w-full h-hero object-scale-down xl:object-cover" data-sizes="auto" data-src="{{.Params.hero_image}}?width=1200" alt="{{.Title}}">
     </figure>
     {{end}}
 
-    <article class="flex flex-col">
-    {{ range .Params.gallery }}
-      <figure class="h-screen lg:h-scroll flex flex-row {{with .alignment}}lg:justify-{{.}} justify-center {{end}} snap-center">
-        <img class="lazyload h-off w-11/12 {{with .height}}lg:h-{{.}}{{end}} lg:w-auto cover" data-sizes="auto" data-src="{{.image}}?width=1200">
-        </figure>
-    {{end}}
-    </article>
+
+      {{ range .Params.gallery }}
+      <article class="h-screen xl:snap-start">
+      <div class="flex flex-col xl:flex-row xl:flex-gap-x">
+      {{ if .image }}
+      {{ $items := len .image }}
+      {{ $counter := 0 }}
+      {{ range .image }}
+      {{ $counter = add $counter 1 }}
+        <figure class="{{if lt $items 3}}2-items{{else}}{{end}} h-screen flex flex-row xl:flex-col {{if .aligment }}justify-{{ .alignment}}{{else}}justify-center{{end}}">
+            <img class="snap-center xl:snap-reset lazyload w-3/4 xl:w-full {{with .height}}xl:h-{{.}}{{end}} object-scale-down xl:object-cover" data-sizes="auto" data-src="{{.image}}?width=1200">
+          </figure>
+      {{end}}
+      {{end}}
+      </div>
+      </article>
+      {{end}}
 
 </section>
 {{ end }}
