@@ -7,6 +7,7 @@
           <div class="row-wrap">
             {% for item in top_row %}
               <div class="item">
+                <div class="title">{{item.item}}</div>
                 {% if item.show_video %}
                   <video
                     autoplay=""
@@ -27,6 +28,7 @@
           <div class="row-wrap">
             {% for item in bottom_row %}
               <div class="item">
+                <div class="title">{{item.item}}</div>
                 {% if item.show_video %}
                   <video
                     autoplay=""
