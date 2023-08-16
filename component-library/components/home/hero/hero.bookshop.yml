@@ -16,11 +16,16 @@ blueprint:
   button:
     text: Try This Free
     url: /signup
-  items:
+  top_row:
     - item: item
       image:
       video:
-      
+  bottom_row:
+    - item: item
+      show_video: false
+      image: /images/hero/hero-image-2.png
+      video:
+
       
 
 # Overrides any fields in the blueprint when viewing this component in the component browser

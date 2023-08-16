@@ -3,27 +3,47 @@
     <div class="overlay-gradient"></div>
     <div class="" id="tilted">
       <div class="tilted-wrap">
-      <div class="top-row">
-        <div class="row-wrap">
-          <div class="item">
-            <img src="https://brandlew.co/wp-content/uploads/2023/07/dhh-medspa-screenshot-1536x864.png">
+        <div class="top-row">
+          <div class="row-wrap">
+            {% for item in top_row %}
+              <div class="item">
+                {% if item.show_video %}
+                  <video
+                    autoplay=""
+                    loop=""
+                    muted=""
+                    poster="{{item.image}}"
+                    preload="auto"
+                    src="{{item.video}}"
+                    playsinline=""></video>
+                    {% else %}
+                    <img src="{{item.image}}" alt="">
+                    {% endif %}
+              </div>
+            {% endfor %}
           </div>
-          <div class="item">
-            <img src="https://brandlew.co/wp-content/uploads/2023/07/dhh-medspa-screenshot-1536x864.png">
+        </div>
+        <div class="bottom-row">
+          <div class="row-wrap">
+            {% for item in bottom_row %}
+              <div class="item">
+                {% if item.show_video %}
+                  <video
+                    autoplay=""
+                    loop=""
+                    muted=""
+                    poster="{{item.image}}"
+                    preload="auto"
+                    src="{{item.video}}"
+                    playsinline=""></video>
+                {% else %}
+                <img src="{{item.image}}" alt="">
+                {% endif %}
+              </div>
+            {% endfor %}
           </div>
         </div>
       </div>
-      <div class="bottom-row">
-        <div class="row-wrap">
-          <div class="item">
-            <img src="https://brandlew.co/wp-content/uploads/2023/07/dhh-medspa-screenshot-1536x864.png">
-          </div>
-          <div class="item">
-            <img src="https://brandlew.co/wp-content/uploads/2023/07/dhh-medspa-screenshot-1536x864.png">
-          </div>
-        </div>
-      </div>
-    </div>
     </div>
   </div>
 </div>
