@@ -3,7 +3,7 @@
     <div class="overlay-gradient"></div>
     <div class="" id="tilted">
       <div class="tilted-wrap">
-        <div class="top-row">
+        <div class="top-row parallax-left">
           <div class="row-wrap">
             {% for item in top_row %}
               <div class="item">
@@ -23,7 +23,7 @@
             {% endfor %}
           </div>
         </div>
-        <div class="bottom-row">
+        <div class="bottom-row parallax-right">
           <div class="row-wrap">
             {% for item in bottom_row %}
               <div class="item">
@@ -47,3 +47,41 @@
     </div>
   </div>
 </div>
+
+
+<script>
+  const heroParallaxLeft = document.querySelector('.parallax-left');
+const heroParallaxRight = document.querySelector('.parallax-right');
+const parallaxImage = document.querySelectorAll('.parallax-image');
+const parallaxImageTwo = document.querySelectorAll('.parallax-image-two');
+const headerSticky = document.querySelector('.kadence-sticky-header');
+const headerGradient = document.querySelector('.site-header-upper-wrap');
+const primaryNav = document.getElementById('primary-menu');
+
+
+window.addEventListener('scroll', () => {
+	const scrolledFromTop = window.scrollY
+	const parallaxAmount = Math.round(scrolledFromTop * 0.6) + 'px'
+	const parallaxImageAmount = Math.round(scrolledFromTop * 0.2) + 'px'
+	const parallaxImageAmountTwo = Math.round(scrolledFromTop * 0.1) + 'px'
+	heroParallaxLeft.style.transform = `translateX(-${parallaxAmount})`
+	heroParallaxRight.style.transform = `translateX(${parallaxAmount})`
+  for (var i = 0; i < parallaxImage.length; i++) {
+  	parallaxImage[i].style.transform = `translateY(-${parallaxImageAmount})`;
+  }
+  for (var i = 0; i < parallaxImageTwo.length; i++) {
+  	parallaxImageTwo[i].style.transform = `translateY(${parallaxImageAmountTwo})`;
+  }
+	if (window.scrollY > window.innerHeight * 0.7) {
+     headerSticky.style.backgroundColor = "#111";
+   } else {
+     headerSticky.style.backgroundColor = "transparent";
+   }
+   	if (window.scrollY > window.innerHeight * 1) {
+     primaryNav.style.opacity = 1;
+   } else {
+     primaryNav.style.opacity = 0;
+   }
+})
+
+</script>
