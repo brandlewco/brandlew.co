@@ -1,6 +1,5 @@
 #tilt-frame {
   min-height: 100vh;
-  grid-template-columns: minmax(0, 1fr);
 }
 
 #tilt-frame:after {
@@ -14,18 +13,19 @@
   background-image: linear-gradient(180deg, rgba(17, 17, 17, 100) 0%, rgba(17, 17, 17, 0) 50%, rgba(17,17,17,80%) 80%, rgba(17,17,17,100) 100%);
   pointer-events: none;
 }
+
 #tilted {
   transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
-  background-color: black;
   display: flex;
   flex-direction: column;
   min-height: 0;
   min-width: 0;
   z-index: 1;
-
 }
+
 .tilted-wrap {
   position: absolute;
+  scale: 0.85;
 }
 
 .tilt-frame-wrap {
@@ -53,54 +53,51 @@
 .top-row {
   transform: translateX(0px);
   left: -50px;
-  margin-left: -500px !important;
+  margin-left: -700px !important;
 }
 
 .bottom-row {
   transform: translateX(0px);
-  margin-left: -1250px !important;
+  margin-left: -1600px !important;
 }
 
 .row-wrap {
     display: flex;
     column-gap: 4rem;
-    padding-top: 0rem;
-    padding-right: 0rem;
-    padding-bottom: 4rem;
-    padding-left: 0rem;
-    min-height: 400px;
+    padding: 0 0 4rem 0;
 }
-
 .item {
-  background-color: $color-gray-dark;
+  background-color: $color-gray-light;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   border-bottom-left-radius: 16px;
-  box-shadow: -16px 16px 0px 0px $color-black;
   border-top: 8px solid $color-gray-light;
   border-right: 8px solid $color-gray-light;
   border-bottom: 8px solid $color-gray-light;
   border-left: 8px solid $color-gray-light;
 }
 
+.window {
+  border-width: 4px 4px 2px 2px;
+  border-style: solid;
+  border-top-color: #ccc;
+  border-right-color: #eee;
+  border-bottom-color: #eee;
+  border-left-color: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
 .item .title {
   position: relative;
-  background: $color-white;
-  color: $color-black;
-  padding-top: 0px;
-  padding-bottom: 12px;
   padding-left: 40px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-size: 10px;
-  line-height: 10px;
 }
 
 .item .title:before {
   content: '';
   position: absolute;
-  top: 0px;
+  top: 6px;
   left: 0px;
   height: 12px;
   width: 12px;
@@ -110,7 +107,7 @@
 .item .title:after {
   content: '';
   position: absolute;
-  top: 0px;
+  top: 6px;
   left: 18px;
   height: 12px;
   width: 12px;
@@ -118,6 +115,6 @@
   background: $color-secondary;
 }
 
-.item img {
+.item img, .item video {
  height: 720px;
 }

@@ -6,6 +6,7 @@ const MarkdownIt = require("markdown-it"),
   md = new MarkdownIt({
     html: true,
   });
+const mtos = require("eleventy-plugin-mtos");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("length", (input) => {
@@ -33,6 +34,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("site/images");
   eleventyConfig.addPassthroughCopy("site/js");
   eleventyConfig.addPassthroughCopy("site/vendor");
+  // eleventyConfig.addPlugin(mtos, {
+   
+  // });
   return {
     dir: {
       input: "site",

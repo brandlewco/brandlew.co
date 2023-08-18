@@ -20,6 +20,7 @@
     "@bookshop/eleventy-bookshop": "3.3.3",
     "@bookshop/eleventy-engine": "3.3.3",
     "@bookshop/generate": "3.3.3",
+    "eleventy-plugin-mtos": "^0.2.0",
     "eleventy-plugin-wordcount": "^1.0.5",
     "markdown-it": "^13.0.1",
     "npm-run-all": "^4.1.5",
